@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="app">
+    <div class="container mt-5">
+        <h3>{{ adverts.length }} properties found:</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="container mt-5">
+                <advert v-for="advert in adverts"
+                        v-bind:key="advert.id"
+                        v-bind:advert="advert">
+                </advert>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <info-box v-bind:info-box="infoBox"></info-box>
+        </div>
+    </div>
+</div>
